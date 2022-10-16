@@ -1,0 +1,72 @@
+.TableContainer{
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    border-color: #7FDBFF;
+    /* Kommenter vekk */
+    border: 1px solid;  
+    /* Kommenter vekk */
+    border-radius: 20px;
+    overflow: auto;
+}
+
+
+.TableStyler {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.TableHead {
+    background-color: navy;
+    height: 6%;
+    width: 100%;
+}
+
+.TableItem {
+    border: 1px solid #7FDBFF;
+    text-align: center;
+}
+
+.TableRow {
+    background-color: navy;
+    height: 6%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.PaginationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.PaginationButton {
+    border-radius: 100%;
+    color: #7FDBFF;
+    border-color: #7FDBFF;
+    background-color: #001f3f;
+    transition: transform .2s;
+
+}
+
+.PaginationButton:hover {
+    transform: scale(1.2);
+    background-color: #032e58;
+}
+
+.PaginationButton:active {
+    background-color: #7FDBFF;
+    color: #001f3f;
+    border-radius: 100%;
+    scale: 1.5;
+}
+
+.ActiveButton {
+    background-color: #7FDBFF;
+    color: #001f3f;
+    border-radius: 100%;
+    scale: 1.5;
+}
