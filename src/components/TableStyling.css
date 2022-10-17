@@ -41,6 +41,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 2vh;
+    gap: 5px;
 }
 
 .PaginationButton {
@@ -64,9 +65,9 @@
     scale: 1.5;
 }
 
-.ActiveButton {
+/* .ActiveButton {
     background-color: #7FDBFF;
     color: #001f3f;
     border-radius: 100%;
     scale: 1.5;
-}
+} */
