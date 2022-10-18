@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import '../App.css';
-import axios from 'axios';
 import './TableStyling.css';
 import { useBitcoinData } from '../hooks/useBitcoinData';
-
-const url = "https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=100&api_key=8ae55d463e1bf8d38b4a502ca47512f9b1dec21533ad9af7acb993e8ba952bc2"
 
 
 
 const Table = () => {
   const [activepage, setActivepage] = useState(1)
+
   let pagelen = 20  
 
   const {isLoading, data, refetch, isError, error} = useBitcoinData(activepage, pagelen)
 
-  let pages = [1,2,3,4,5]
-
+    let pages = [1,2,3,4,5]
 
   function dateConverter(datadate) {
     return(new Date(datadate*1000).toLocaleDateString('en-GB'))
@@ -60,7 +56,7 @@ const Table = () => {
       </div>
       <div className='PaginationContainer'>
         {pages.map((pagenumber, key) => {return(
-          <button onClick={() => handlePageChange(pagenumber)} className={`PaginationButton ${key == activepage ? "active" : ""}`}>{pagenumber}</button>
+          <button onClick={() => handlePageChange(pagenumber)} className={`PaginationButton ${key === activepage ? "active" : ""}`}>{pagenumber}</button>
         )})}
       </div>
     </>
